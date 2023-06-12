@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="xsi" id="_ELTGIOs3EDuUD4GPEkxuZg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:collaboration id="_18A659BF-D921-4F72-81BD-5A367F3C8ADE" name="Default Collaboration">
+    <bpmn2:participant id="_700F7B3D-F87D-4166-92D9-1D5C9504DB07" name="Pool Participant" processRef="breaking"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="breaking" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="breaking" isExecutable="true" processType="Public">
+    <bpmn2:sequenceFlow id="_548AC660-1644-4D26-9F24-2BFD4628EB4C" sourceRef="_E0885F62-BB5D-41D5-A766-371CE9F9683B" targetRef="_FD783EFE-588A-4D96-B46B-548217FCF830"/>
+    <bpmn2:endEvent id="_FD783EFE-588A-4D96-B46B-548217FCF830">
+      <bpmn2:incoming>_548AC660-1644-4D26-9F24-2BFD4628EB4C</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_E0885F62-BB5D-41D5-A766-371CE9F9683B">
+      <bpmn2:outgoing>_548AC660-1644-4D26-9F24-2BFD4628EB4C</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="breaking">
+      <bpmndi:BPMNShape id="shape__E0885F62-BB5D-41D5-A766-371CE9F9683B" bpmnElement="_E0885F62-BB5D-41D5-A766-371CE9F9683B">
+        <dc:Bounds height="56" width="56" x="127" y="70"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__FD783EFE-588A-4D96-B46B-548217FCF830" bpmnElement="_FD783EFE-588A-4D96-B46B-548217FCF830">
+        <dc:Bounds height="56" width="56" x="263" y="70"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__E0885F62-BB5D-41D5-A766-371CE9F9683B_to_shape__FD783EFE-588A-4D96-B46B-548217FCF830" bpmnElement="_548AC660-1644-4D26-9F24-2BFD4628EB4C">
+        <di:waypoint x="155" y="98"/>
+        <di:waypoint x="291" y="98"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_E0885F62-BB5D-41D5-A766-371CE9F9683B">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_ELTGIOs3EDuUD4GPEkxuZg</bpmn2:source>
+    <bpmn2:target>_ELTGIOs3EDuUD4GPEkxuZg</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
